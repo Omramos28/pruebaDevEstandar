@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<script>
+    // Se define la función para realizar la conversión
+    function convert(numero, base) {
+    let lista = [];
+    while (numero >= 1) {
+    lista.push(numero % base + "");
+    numero = Math.floor(numero / base);
+    }
+    return lista.reverse().join(""); // returna la lista pero al revés.
+}
+
+    let numero = parseInt(prompt("Ingresa el número decimal: "));
+    let base = parseInt(prompt("Ingresa la base para la conversión: "));
+
+    let result = convert(numero, base);
+
+    document.write(`El valor de la conversión en base ${base} es: ${result}`);
+</script>
+<p>Gracias por utilizar nuestro servicio!!!!!</p>
+</body>
+</html> 
